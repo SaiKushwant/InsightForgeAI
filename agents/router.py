@@ -1,7 +1,9 @@
 from langchain_groq import ChatGroq
-from dotenv import load_dotenv
 from pathlib import Path
-import os
+import streamlit as st
+
+groq_api_key = st.secrets["GROQ_API_KEY"]
+tavily_api_key = st.secrets["TAVILY_API_KEY"]
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 load_dotenv(BASE_DIR / ".env")
