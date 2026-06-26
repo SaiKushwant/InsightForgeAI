@@ -1,8 +1,8 @@
-from dotenv import load_dotenv
-import os
 from langchain_groq import ChatGroq
+import streamlit as st
 
-load_dotenv()
+groq_api_key = st.secrets["GROQ_API_KEY"]
+tavily_api_key = st.secrets["TAVILY_API_KEY"]
 
 llm = ChatGroq(
     model="llama-3.3-70b-versatile",
